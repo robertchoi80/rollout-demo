@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: robertchoi80/appserve-lcm:wrong-port
+        image: robertchoi80/appserve-lcm:exit
         imagePullPolicy: Always
         ports:
         - containerPort: 9111
