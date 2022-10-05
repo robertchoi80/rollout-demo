@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: argoproj/rollouts-demo:blue
+        image: sktcloud/tks-info:test-appserving-v9
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 9111
   strategy:
-    blueGreen: 
+    blueGreen:
       activeService: rollout-bluegreen-active
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: false
@@ -37,7 +37,7 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8080
+    targetPort: 9111
     nodePort: 30091
   type: NodePort
 
@@ -52,6 +52,6 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8080
+    targetPort: 9111
     nodePort: 30092
   type: NodePort
