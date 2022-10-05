@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: robertchoi80/appserve-lcm:adfasf
+        image: robertchoi80/appserve-lcm:adfaldkfjadf
         imagePullPolicy: Always
         ports:
         - containerPort: 9111
@@ -24,7 +24,7 @@ spec:
     blueGreen:
       activeService: rollout-bluegreen-active
       previewService: rollout-bluegreen-preview
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true
 
 ---
 kind: Service
